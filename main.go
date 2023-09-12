@@ -1,10 +1,9 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import m1t1 "awesomeProject/module1/task1"
+import m2t1 "awesomeProject/module2/task2"
 
 func main() {
-	fmt.Printf("Today is %s", time.Now().Format("02.01.2006 15:04"))
+	m1t1.Task()
+	m2t1.Task()
 }
