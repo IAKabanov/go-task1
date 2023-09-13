@@ -1,78 +1,33 @@
 package task2
 
 import (
+	"awesomeProject/utility"
 	"fmt"
-	"log"
-	"strconv"
+	"math"
 )
-
-type (
-	EuropeanConverter interface {
-		MphToKmh(mph float64)
-		MsToKmh(ms float64)
-	}
-
-	EuropeanVelocity float64
-)
-
-type (
-	AmericanConverter interface {
-		KmhToMph(kmh float64)
-		MsToMph(ms float64)
-	}
-
-	AmericanVelocity float64
-)
-
-func (a *AmericanVelocity) KmhToMph(kmh float64) {
-	mph := kmh / 1.609
-	*a = AmericanVelocity(mph)
-}
-
-func (a *AmericanVelocity) MsToMph(ms float64) {
-	kmh := ms * 3.6
-	a.KmhToMph(kmh)
-}
-
-func (e *EuropeanVelocity) MphToKmh(mph float64) {
-	kmh := mph * 1.609
-	*e = EuropeanVelocity(kmh)
-}
-
-func (e *EuropeanVelocity) MsToKmh(ms float64) {
-	kmh := ms * 3.6
-	*e = EuropeanVelocity(kmh)
-}
 
 func Task() {
-	printTaskNum()
-	stringVar := "104"
-	intVar := 35
-	strToIVar, err := strconv.Atoi(stringVar)
-	if err != nil {
-		log.Fatal(err)
-	}
-	intToStrVar := strconv.Itoa(intVar)
-	fmt.Printf("stringVar \"%s\", intVar %d, strToIVar %d, intToStrVar \"%s\"\n", stringVar, intVar, strToIVar, intToStrVar)
-
-	var kmh EuropeanVelocity = 0
-	var mph AmericanVelocity = 0
-	fmt.Printf("kmh=%f, mph=%f\n", kmh, mph)
-
-	kmh.MsToKmh(20)
-	mph.KmhToMph(100)
-	fmt.Printf("kmh=%f, mph=%f\n", kmh, mph)
-
-	kmh.MphToKmh(88)
-	mph.MsToMph(26.8224)
-	fmt.Printf("kmh=%f, mph=%f\n", kmh, mph)
-
+	utility.AnnounceNewTask(2, 2)
+	playground()
+	radiusAndSquare()
 }
 
-func printTaskNum() {
-	fmt.Println()
-	fmt.Println()
-	fmt.Println("====================Task 2====================")
-	fmt.Println()
-	fmt.Println()
+func playground() {
+	var A *int
+	var B = 25
+	A = &B
+	fmt.Printf("The pointer on B (%d) has the adress 0x%x and the value %d\n", B, A, *A)
+
+	*A = 50
+	fmt.Printf("The pointer on B (%d) has the adress 0x%x and the value %d\n\n", B, A, *A)
+}
+
+func radiusAndSquare() {
+	length := 35.
+	R := new(float64)
+	*R = length / (2 * math.Pi)
+	fmt.Printf("Round length %.2f = 2 * pi * radius %.2f\n", math.Round(length*100)/100, math.Round(*R*100)/100)
+	rSquared := math.Pow(*R, 2)
+	square := math.Pi * rSquared
+	fmt.Printf("Round square %.2f = pi * r^2 %.2f\n", math.Round(square*100)/100, math.Round(rSquared*100)/100)
 }
