@@ -7,6 +7,7 @@ import (
 	m2t3 "awesomeProject/module2/task3"
 	m2t4 "awesomeProject/module2/task4"
 	m2t5 "awesomeProject/module2/task5"
+	m2t6 "awesomeProject/module2/task6"
 )
 
 func main() {
@@ -16,4 +17,5 @@ func main() {
 	m2t3.Task()
 	m2t4.Task()
 	m2t5.Task()
+	m2t6.Task()
 }
