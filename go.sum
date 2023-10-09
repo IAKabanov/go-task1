@@ -1,2 +1,8 @@
+github.com/IAKabanov/utils v1.1.1 h1:xG0o7BiiuAaC31GDcweIZOmekDiyLFFHD6JQT9mulxw=
+github.com/IAKabanov/utils v1.1.1/go.mod h1:WiCKuGD9WeBbm0u2DUPUxPI6ah7BDYGIXRQER5Vs85w=
+github.com/IAKabanov/utils/v2 v2.0.0 h1:qUVdfZmuMVqb38PDkzf1TmQmezdXTjxs/dN5GS+pHkY=
+github.com/IAKabanov/utils/v2 v2.0.0/go.mod h1:HuwPGU2hy8brE63TxRbSxuJVGMqDL2XSgejj53hBxzA=
+github.com/IAKabanov/utils/v3 v3.0.0 h1:1RkR9gPAKG8cyTVwkOPNyxGim79MpLtFf68Bc4VszTY=
+github.com/IAKabanov/utils/v3 v3.0.0/go.mod h1:FmLOQllSTcvOYO5JXSPaGgCnD7fSxStZmuWK0WRkDhk=
 github.com/huandu/xstrings v1.2.1 h1:v6IdmkCnDhJG/S0ivr58PeIfg+tyhqQYy4YsCsQ0Pdc=
 github.com/huandu/xstrings v1.2.1/go.mod h1:y5/lhBue+AyNmUVz9RLU9xbLR0o4KIIExikq4ovT0aE=
